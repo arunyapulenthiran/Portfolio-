@@ -206,9 +206,10 @@ nav {
 .project-card h3 {
     font-size: 24px;
     margin-bottom: 15px;
+    color: #fff7f3;
 }
 .project-card > p {
-    color: #999;
+    color: #b9aeb5;
 }
 .tech {
     margin-top: 22px;
@@ -219,7 +220,7 @@ nav {
 .project-link {
     display: inline-block;
     margin-top: 25px;
-    color: white;
+    color: #f08caf;
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
