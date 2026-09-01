@@ -69,7 +69,7 @@ nav {
     max-width: 800px;
 }
 .intro {
-    colour: var(--pink)
+    colour:var(--pink)
     font-size: 18px;
     margin-bottom: 10px;
 }
@@ -79,7 +79,7 @@ nav {
     margin-bottom: 20px;
 }
 .hero h2 {
-    colour: var(--pink-light)
+    colour:var(--pink-light)
     font-size: clamp(22px, 4vw, 34px);
     font-weight: normal;
     color: #555;
