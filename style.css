@@ -243,19 +243,35 @@ nav {
 /* YOUR NAME */
 
 .hero h1 {
-
     font-family: 'Pacifico', cursive;
 
-    font-size: clamp(3.5rem, 9vw, 7rem);
+    font-size: clamp(3.4rem, 9vw, 7rem);
 
-    color: var(--deep-pink);
+    color: #FF1493;
 
     line-height: 1.15;
 
     margin-bottom: 25px;
 
-    text-shadow: 3px 3px 0 rgba(128, 0, 128, 0.08);
+    letter-spacing: 2px;
 
+    text-transform: uppercase;
+
+    text-shadow:
+        2px 2px 0 #800080,
+        4px 4px 12px rgba(128, 0, 128, 0.12);
+
+    animation: nameFloat 3s ease-in-out infinite;
+}
+
+@keyframes nameFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
 }
 
 /* STEM | Mathematics | Code | Design */
