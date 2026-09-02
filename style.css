@@ -934,3 +934,10 @@ footer a:hover {
     font-size: 0.88rem;
     margin-bottom: 4px;
 }
+.hero h1 {
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    word-break: normal;
+    overflow-wrap: normal;
+}
