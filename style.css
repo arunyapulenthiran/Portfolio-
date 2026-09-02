@@ -934,12 +934,3 @@ footer a:hover {
     font-size: 0.88rem;
     margin-bottom: 4px;
 }
-#about h2,
-#skills h2,
-#projects h2 {
-    font-family: 'Playfair Display', serif;
-    text-align: center;
-    font-size: clamp(2.3rem, 5vw, 3.4rem);
-    color: var(--purple);
-    margin-bottom: 35px;
-}
