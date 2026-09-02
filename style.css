@@ -438,7 +438,9 @@ nav {
     max-width: 900px;
     margin: auto;
     text-align: center;
+
     color: var(--grey);
+
     font-size: 1.15rem;
     line-height: 1.9;
 }
