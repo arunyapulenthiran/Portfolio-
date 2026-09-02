@@ -909,3 +909,28 @@ footer a:hover {
     flex-wrap: wrap;
     margin-top: 25px;
 }
+/* Project Highlights */
+
+.project-highlights {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(128, 0, 128, 0.12);
+}
+
+.project-highlights p {
+    color: var(--purple);
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.project-highlights ul {
+    padding-left: 18px;
+    margin: 0;
+}
+
+.project-highlights li {
+    color: var(--grey);
+    font-size: 0.88rem;
+    margin-bottom: 4px;
+}
