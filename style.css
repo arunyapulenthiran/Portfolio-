@@ -1059,7 +1059,7 @@ footer a:hover {
 }
 .journey-card h3 {
     margin-bottom: 12px;
-    color: #800080;
+    color: var(--purple);
 }
 .journey-card p {
     line-height: 1.7;
