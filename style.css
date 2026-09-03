@@ -1037,6 +1037,7 @@ footer a:hover {
     gap: 25px;
 }
 .journey-card {
+    /* journey cards */
     text-align: left;
     padding: 30px;
     background: rgba(255, 255, 255, 0.75);
