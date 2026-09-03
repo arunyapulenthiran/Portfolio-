@@ -3,7 +3,3 @@ document.querySelectorAll(".progress").forEach(function(bar) {
     const level = bar.getAttribute("data-level");
     bar.style.width = level + "%";
 });
-document.querySelectorAll(".progress").forEach(function(bar) {
-    const level = bar.getAttribute("data-level");
-    bar.style.width = level + "%";
-});
