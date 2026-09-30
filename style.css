@@ -1,58 +1,53 @@
 /* =========================================
-
    ARUNYA PULENTHIRAN — PORTFOLIO
-
    Feminine STEM Theme
+   ========================================= */
 
+
+/* =========================================
+   GOOGLE FONTS
    ========================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
 
+
 /* =========================================
-
-   ROOT
-
+   ROOT VARIABLES
    ========================================= */
 
 :root {
 
     --misty-rose: #FFE4E1;
-
     --deep-pink: #FF1493;
-
     --purple: #800080;
 
     --white: #FFFFFF;
-
     --black: #222222;
-
     --grey: #666666;
 
     --soft-pink: #fff7f6;
 
+    --light-purple: rgba(128, 0, 128, 0.10);
+    --light-pink: rgba(255, 20, 147, 0.10);
+
 }
 
+
 /* =========================================
-
    RESET
-
    ========================================= */
 
 * {
-
     margin: 0;
-
     padding: 0;
-
     box-sizing: border-box;
-
 }
+
 
 html {
-
     scroll-behavior: smooth;
-
 }
+
 
 body {
 
@@ -66,10 +61,9 @@ body {
 
 }
 
+
 /* =========================================
-
    NAVIGATION
-
    ========================================= */
 
 header {
@@ -88,6 +82,7 @@ header {
 
 }
 
+
 nav {
 
     max-width: 1200px;
@@ -104,19 +99,23 @@ nav {
 
 }
 
+
 /* Logo */
 
 .logo {
 
-    font-family: 'Pacifico', cursive;
+    font-family: 'Playfair Display', serif;
 
     font-size: 1.8rem;
+
+    font-weight: 800;
 
     color: var(--deep-pink);
 
     text-decoration: none;
 
 }
+
 
 /* Navigation links */
 
@@ -128,6 +127,7 @@ nav {
 
 }
 
+
 .nav-links a {
 
     color: var(--purple);
@@ -136,9 +136,10 @@ nav {
 
     font-weight: 600;
 
-    transition: 0.3s;
+    transition: color 0.3s ease;
 
 }
+
 
 .nav-links a:hover {
 
@@ -146,10 +147,9 @@ nav {
 
 }
 
+
 /* =========================================
-
    HERO
-
    ========================================= */
 
 .hero {
@@ -172,7 +172,8 @@ nav {
 
 }
 
-/* Decorative circles */
+
+/* Decorative circle - left */
 
 .hero::before {
 
@@ -194,6 +195,9 @@ nav {
 
 }
 
+
+/* Decorative circle - right */
+
 .hero::after {
 
     content: "";
@@ -214,6 +218,7 @@ nav {
 
 }
 
+
 .hero-content {
 
     max-width: 950px;
@@ -223,6 +228,7 @@ nav {
     z-index: 1;
 
 }
+
 
 /* Hello, I'm */
 
@@ -240,16 +246,18 @@ nav {
 
 }
 
-/* YOUR NAME */
+
+/* Name */
 
 .hero h1 {
+
     font-family: 'Cinzel Decorative', serif;
 
     font-size: clamp(2.8rem, 7vw, 6rem);
 
     font-weight: 900;
 
-    color: #FF1493;
+    color: var(--deep-pink);
 
     line-height: 1.15;
 
@@ -260,21 +268,27 @@ nav {
     text-transform: uppercase;
 
     text-shadow:
-        2px 2px 0 #800080,
+        2px 2px 0 var(--purple),
         4px 4px 12px rgba(128, 0, 128, 0.12);
 
     animation: nameFloat 3s ease-in-out infinite;
+
 }
 
+
 @keyframes nameFloat {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
 
     50% {
         transform: translateY(-5px);
     }
+
 }
+
 
 /* STEM | Mathematics | Code | Design */
 
@@ -292,6 +306,7 @@ nav {
 
 }
 
+
 /* Hero description */
 
 .hero-text {
@@ -306,10 +321,9 @@ nav {
 
 }
 
+
 /* =========================================
-
    BUTTONS
-
    ========================================= */
 
 .hero-buttons {
@@ -325,6 +339,7 @@ nav {
     margin-top: 35px;
 
 }
+
 
 .button {
 
@@ -344,9 +359,13 @@ nav {
 
     border: 2px solid var(--deep-pink);
 
-    transition: 0.3s;
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
 
 }
+
 
 .button:hover {
 
@@ -357,6 +376,7 @@ nav {
     transform: translateY(-3px);
 
 }
+
 
 /* Secondary button */
 
@@ -370,6 +390,7 @@ nav {
 
 }
 
+
 .button.secondary:hover {
 
     background: var(--purple);
@@ -378,10 +399,9 @@ nav {
 
 }
 
+
 /* =========================================
-
    GENERAL SECTIONS
-
    ========================================= */
 
 .section {
@@ -394,7 +414,8 @@ nav {
 
 }
 
-/* Small labels */
+
+/* Small section labels */
 
 .section-label {
 
@@ -412,6 +433,7 @@ nav {
 
 }
 
+
 /* Section headings */
 
 .section h2 {
@@ -428,27 +450,30 @@ nav {
 
 }
 
+
 /* =========================================
-
    ABOUT
-
    ========================================= */
 
 #about > p:last-child {
+
     max-width: 900px;
+
     margin: auto;
+
     text-align: center;
 
     color: var(--grey);
 
     font-size: 1.15rem;
+
     line-height: 1.9;
+
 }
 
+
 /* =========================================
-
    SKILLS
-
    ========================================= */
 
 .skills-grid {
@@ -456,7 +481,6 @@ nav {
     display: grid;
 
     grid-template-columns:
-
         repeat(auto-fit, minmax(230px, 1fr));
 
     gap: 22px;
@@ -465,39 +489,209 @@ nav {
 
 }
 
+
 .skill-card {
-    background: #ffffff;
+
+    background: var(--white);
+
     border: 1px solid rgba(128, 0, 128, 0.12);
+
     border-radius: 18px;
+
     padding: 30px;
+
     text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
 }
+
 
 .skill-card:hover {
+
     transform: translateY(-6px);
+
     border-color: rgba(255, 20, 147, 0.35);
-    box-shadow: 0 12px 30px rgba(128, 0, 128, 0.10);
+
+    box-shadow:
+        0 12px 30px rgba(128, 0, 128, 0.10);
+
 }
+
 
 .skill-card h3 {
+
     font-family: 'Playfair Display', serif;
+
     font-size: 1.45rem;
+
     color: var(--purple);
+
     margin-bottom: 12px;
+
 }
+
 
 .skill-card p {
+
     color: var(--grey);
+
     font-size: 0.95rem;
+
     line-height: 1.7;
-    margin: 0;
+
 }
 
+
 /* =========================================
+   SKILLS & FLUENCY
+   ========================================= */
 
+#skills-fluency {
+
+    max-width: 1000px;
+
+}
+
+
+.skills-intro {
+
+    max-width: 700px;
+
+    margin: -15px auto 45px;
+
+    text-align: center;
+
+    color: var(--grey);
+
+}
+
+
+/* Skill category card */
+
+.skill-category {
+
+    background: rgba(255, 255, 255, 0.72);
+
+    border: 2px solid rgba(128, 0, 128, 0.10);
+
+    border-radius: 22px;
+
+    padding: 30px;
+
+    margin-bottom: 28px;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.skill-category:hover {
+
+    border-color: rgba(255, 20, 147, 0.3);
+
+    box-shadow:
+        0 12px 30px rgba(128, 0, 128, 0.10);
+
+}
+
+
+.skill-category-title {
+
+    font-family: 'Playfair Display', serif;
+
+    color: var(--purple);
+
+    font-size: 1.5rem;
+
+    margin-bottom: 25px;
+
+}
+
+
+.skill-item {
+
+    margin-bottom: 20px;
+
+}
+
+
+.skill-item:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+.skill-info {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 7px;
+
+    color: var(--black);
+
+    font-size: 0.95rem;
+
+    font-weight: 600;
+
+}
+
+
+.skill-info span:last-child {
+
+    color: var(--deep-pink);
+
+    font-weight: 700;
+
+}
+
+
+.progress-bar {
+
+    width: 100%;
+
+    height: 10px;
+
+    background: #f1dfe5;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.progress {
+
+    height: 100%;
+
+    width: 0;
+
+    background: linear-gradient(
+        90deg,
+        var(--deep-pink),
+        var(--purple)
+    );
+
+    border-radius: 20px;
+
+    transition: width 1s ease;
+
+}
+
+
+/* =========================================
    PROJECTS
-
    ========================================= */
 
 .projects-intro {
@@ -512,7 +706,8 @@ nav {
 
 }
 
-/* Project category */
+
+/* Project group */
 
 .project-group {
 
@@ -520,7 +715,8 @@ nav {
 
 }
 
-/* Python Practice / Math Toolkit */
+
+/* Project group title */
 
 .group-title {
 
@@ -538,7 +734,8 @@ nav {
 
 }
 
-/* Little pink line */
+
+/* Pink line underneath group title */
 
 .group-title::after {
 
@@ -558,6 +755,7 @@ nav {
 
 }
 
+
 /* Project grid */
 
 .projects-grid {
@@ -565,18 +763,18 @@ nav {
     display: grid;
 
     grid-template-columns:
-
-        repeat(auto-fit, minmax(240px, 1fr));
+        repeat(auto-fit, minmax(260px, 1fr));
 
     gap: 22px;
 
 }
 
+
 /* Project card */
 
 .project-card {
 
-    background: rgba(255, 255, 255, 0.68);
+    background: rgba(255, 255, 255, 0.78);
 
     padding: 28px;
 
@@ -584,13 +782,17 @@ nav {
 
     border: 2px solid rgba(128, 0, 128, 0.12);
 
-    transition: 0.3s;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 
     position: relative;
 
     overflow: hidden;
 
 }
+
 
 /* Pink top accent */
 
@@ -612,6 +814,9 @@ nav {
 
 }
 
+
+/* Project hover */
+
 .project-card:hover {
 
     transform: translateY(-8px);
@@ -619,10 +824,10 @@ nav {
     border-color: var(--deep-pink);
 
     box-shadow:
-
         0 15px 35px rgba(128, 0, 128, 0.14);
 
 }
+
 
 /* Project number */
 
@@ -638,6 +843,7 @@ nav {
 
 }
 
+
 /* Project title */
 
 .project-card h3 {
@@ -652,6 +858,7 @@ nav {
 
 }
 
+
 /* Project description */
 
 .project-card > p:not(.project-number):not(.tech) {
@@ -660,9 +867,12 @@ nav {
 
     font-size: 0.95rem;
 
+    line-height: 1.7;
+
 }
 
-/* Technology */
+
+/* Technology badge */
 
 .tech {
 
@@ -674,7 +884,7 @@ nav {
 
     border-radius: 20px;
 
-    background: rgba(255, 20, 147, 0.1);
+    background: var(--light-pink);
 
     color: var(--deep-pink);
 
@@ -684,13 +894,71 @@ nav {
 
 }
 
-/* GitHub link */
+
+/* =========================================
+   PROJECT HIGHLIGHTS
+   ========================================= */
+
+.project-highlights {
+
+    margin-top: 20px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid rgba(128, 0, 128, 0.12);
+
+}
+
+
+.project-highlights p {
+
+    color: var(--purple);
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+
+}
+
+
+.project-highlights ul {
+
+    padding-left: 18px;
+
+    margin: 0;
+
+}
+
+
+.project-highlights li {
+
+    color: var(--grey);
+
+    font-size: 0.88rem;
+
+    margin-bottom: 4px;
+
+}
+
+
+/* =========================================
+   PROJECT LINKS
+   ========================================= */
+
+.project-links {
+
+    margin-top: 20px;
+
+}
+
 
 .project-link {
 
     display: block;
 
-    margin-top: 18px;
+    margin-top: 10px;
 
     color: var(--purple);
 
@@ -698,9 +966,12 @@ nav {
 
     font-weight: 700;
 
-    transition: 0.3s;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
 
 }
+
 
 .project-link:hover {
 
@@ -710,10 +981,240 @@ nav {
 
 }
 
+
 /* =========================================
+   STUDYFLOW FEATURED PROJECT
+   ========================================= */
 
+.studyflow-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.92),
+            rgba(247, 221, 229, 0.55)
+        );
+
+    border-color: rgba(255, 20, 147, 0.20);
+
+}
+
+
+.studyflow-card::before {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--deep-pink),
+            var(--purple)
+        );
+
+}
+
+
+.studyflow-card:hover {
+
+    border-color: var(--deep-pink);
+
+}
+
+
+/* =========================================
+   DESIGN & CREATIVE WORK
+   ========================================= */
+
+.design-section {
+
+    max-width: 1150px;
+
+}
+
+
+.design-intro {
+
+    max-width: 700px;
+
+    margin: -15px auto 50px;
+
+    text-align: center;
+
+    color: var(--grey);
+
+}
+
+
+/* Design grid */
+
+.design-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+
+}
+
+
+/* Design card */
+
+.design-card {
+
+    background: rgba(255, 255, 255, 0.78);
+
+    border: 2px solid rgba(128, 0, 128, 0.12);
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.design-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: var(--deep-pink);
+
+    box-shadow:
+        0 18px 40px rgba(128, 0, 128, 0.14);
+
+}
+
+
+/* Design image */
+
+.design-image-wrapper {
+
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    background: var(--white);
+
+}
+
+
+.design-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+
+}
+
+
+.design-card:hover .design-image {
+
+    transform: scale(1.03);
+
+}
+
+
+/* Design content */
+
+.design-content {
+
+    padding: 28px;
+
+}
+
+
+.design-number {
+
+    color: var(--deep-pink);
+
+    font-size: 0.9rem;
+
+    font-weight: 800;
+
+    margin-bottom: 8px;
+
+}
+
+
+.design-content h3 {
+
+    font-family: 'Playfair Display', serif;
+
+    color: var(--purple);
+
+    font-size: 1.45rem;
+
+    margin-bottom: 12px;
+
+}
+
+
+.design-content > p:not(.design-number) {
+
+    color: var(--grey);
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* Design tags */
+
+.design-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 18px;
+
+}
+
+
+.design-tags span {
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    background: var(--light-pink);
+
+    color: var(--deep-pink);
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+}
+
+
+/* Design link */
+
+.design-content .project-link {
+
+    margin-top: 20px;
+
+}
+
+
+/* =========================================
    CONTACT
-
    ========================================= */
 
 .contact {
@@ -721,6 +1222,7 @@ nav {
     text-align: center;
 
 }
+
 
 .contact > p:not(.section-label) {
 
@@ -732,11 +1234,13 @@ nav {
 
 }
 
+
 .contact-details {
 
     margin: 30px 0;
 
 }
+
 
 .contact-details p {
 
@@ -746,11 +1250,13 @@ nav {
 
 }
 
+
 .contact-details strong {
 
     color: var(--purple);
 
 }
+
 
 .contact-details a {
 
@@ -762,23 +1268,40 @@ nav {
 
 }
 
+
 .contact-details a:hover {
 
     color: var(--purple);
 
 }
 
+
+/* Contact buttons */
+
+.contact-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 25px;
+
+}
+
+
 /* =========================================
-
    FOOTER
-
    ========================================= */
 
 footer {
 
     background: var(--purple);
 
-    color: white;
+    color: var(--white);
 
     text-align: center;
 
@@ -786,15 +1309,17 @@ footer {
 
 }
 
+
 footer p {
 
     margin-bottom: 12px;
 
 }
 
+
 footer a {
 
-    color: white;
+    color: var(--white);
 
     text-decoration: none;
 
@@ -802,9 +1327,10 @@ footer a {
 
     font-weight: 600;
 
-    transition: 0.3s;
+    transition: color 0.3s ease;
 
 }
+
 
 footer a:hover {
 
@@ -812,13 +1338,15 @@ footer a:hover {
 
 }
 
+
 /* =========================================
-
    MOBILE
-
    ========================================= */
 
 @media (max-width: 700px) {
+
+
+    /* Navigation */
 
     nav {
 
@@ -830,6 +1358,7 @@ footer a:hover {
 
     }
 
+
     .nav-links {
 
         gap: 16px;
@@ -840,11 +1369,15 @@ footer a:hover {
 
     }
 
+
     .nav-links a {
 
         font-size: 0.9rem;
 
     }
+
+
+    /* Hero */
 
     .hero {
 
@@ -854,11 +1387,21 @@ footer a:hover {
 
     }
 
+
     .hero h1 {
 
-        font-size: clamp(3rem, 15vw, 5rem);
+        font-size: clamp(2.4rem, 13vw, 4rem);
+
+        letter-spacing: 1px;
+
+        line-height: 1.2;
+
+        word-break: normal;
+
+        overflow-wrap: normal;
 
     }
+
 
     .hero h2 {
 
@@ -866,11 +1409,22 @@ footer a:hover {
 
     }
 
+
+    .hero-text {
+
+        font-size: 1rem;
+
+    }
+
+
+    /* Sections */
+
     .section {
 
         padding: 75px 6%;
 
     }
+
 
     .section h2 {
 
@@ -878,7 +1432,31 @@ footer a:hover {
 
     }
 
-    .skills-grid,
+
+    /* Skills */
+
+    .skills-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .skill-category {
+
+        padding: 24px;
+
+    }
+
+
+    .skill-category-title {
+
+        font-size: 1.3rem;
+
+    }
+
+
+    /* Projects */
 
     .projects-grid {
 
@@ -886,280 +1464,131 @@ footer a:hover {
 
     }
 
-}
-.contact-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 25px;
-}
-/* Project Highlights */
 
-.project-highlights {
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid rgba(128, 0, 128, 0.12);
-}
+    .project-card {
 
-.project-highlights p {
-    color: var(--purple);
-    font-size: 0.9rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-}
+        padding: 25px;
 
-.project-highlights ul {
-    padding-left: 18px;
-    margin: 0;
-}
-
-.project-highlights li {
-    color: var(--grey);
-    font-size: 0.88rem;
-    margin-bottom: 4px;
-}
-.hero h1 {
-    font-size: 2.4rem;
-    letter-spacing: 1px;
-    line-height: 1.2;
-    word-break: normal;
-    overflow-wrap: normal;
-}
-/* =========================================
-   SKILLS & FLUENCY
-   ========================================= */
-
-#skills-fluency {
-    max-width: 1000px;
-}
-
-.skills-intro {
-    max-width: 700px;
-    margin: -15px auto 45px;
-    text-align: center;
-    color: var(--grey);
-}
-
-.skill-category {
-    background: rgba(255, 255, 255, 0.72);
-    border: 2px solid rgba(128, 0, 128, 0.10);
-    border-radius: 22px;
-    padding: 30px;
-    margin-bottom: 28px;
-    transition: 0.3s ease;
-}
-
-.skill-category:hover {
-    border-color: rgba(255, 20, 147, 0.3);
-    box-shadow: 0 12px 30px rgba(128, 0, 128, 0.10);
-}
-
-.skill-category-title {
-    font-family: 'Playfair Display', serif;
-    color: var(--purple);
-    font-size: 1.5rem;
-    margin-bottom: 25px;
-}
-
-.skill-item {
-    margin-bottom: 20px;
-}
-
-.skill-item:last-child {
-    margin-bottom: 0;
-}
-
-.skill-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 7px;
-    color: var(--black);
-    font-size: 0.95rem;
-    font-weight: 600;
-}
-
-.skill-info span:last-child {
-    color: var(--deep-pink);
-    font-weight: 700;
-}
-
-.progress-bar {
-    width: 100%;
-    height: 10px;
-    background: #f1dfe5;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.progress {
-    height: 100%;
-    width: 0;
-    background: linear-gradient(
-        90deg,
-        var(--deep-pink),
-        var(--purple)
-    );
-    border-radius: 20px;
-    transition: width 1s ease;
-}
-
-/* Mobile */
-
-@media (max-width: 700px) {
-
-    .skill-category {
-        padding: 24px;
     }
 
-    .skill-category-title {
-        font-size: 1.3rem;
-    }
 
-}
-/* =========================================
-   DESIGN & CREATIVE WORK
-   ========================================= */
-
-.design-section {
-    max-width: 1150px;
-}
-
-.design-intro {
-    max-width: 700px;
-    margin: -15px auto 50px;
-    text-align: center;
-    color: var(--grey);
-}
-
-/* Design grid */
-
-.design-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-/* Design card */
-
-.design-card {
-    background: rgba(255, 255, 255, 0.78);
-    border: 2px solid rgba(128, 0, 128, 0.12);
-    border-radius: 24px;
-    overflow: hidden;
-    transition: 0.3s ease;
-}
-
-.design-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--deep-pink);
-    box-shadow: 0 18px 40px rgba(128, 0, 128, 0.14);
-}
-
-/* Image */
-
-.design-image-wrapper {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
-    background: white;
-}
-
-.design-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
-}
-
-.design-card:hover .design-image {
-    transform: scale(1.03);
-}
-
-/* Content */
-
-.design-content {
-    padding: 28px;
-}
-
-.design-number {
-    color: var(--deep-pink);
-    font-size: 0.9rem;
-    font-weight: 800;
-    margin-bottom: 8px;
-}
-
-.design-content h3 {
-    font-family: 'Playfair Display', serif;
-    color: var(--purple);
-    font-size: 1.45rem;
-    margin-bottom: 12px;
-}
-
-.design-content > p:not(.design-number) {
-    color: var(--grey);
-    font-size: 0.95rem;
-    line-height: 1.7;
-}
-
-/* Design tags */
-
-.design-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 18px;
-}
-
-.design-tags span {
-    padding: 5px 12px;
-    border-radius: 20px;
-    background: rgba(255, 20, 147, 0.1);
-    color: var(--deep-pink);
-    font-size: 0.78rem;
-    font-weight: 700;
-}
-
-/* Design link */
-
-.design-content .project-link {
-    margin-top: 20px;
-}
-
-
-/* =========================================
-   DESIGN MOBILE
-   ========================================= */
-
-@media (max-width: 700px) {
+    /* Designs */
 
     .design-grid {
+
         grid-template-columns: 1fr;
+
     }
+
 
     .design-content {
+
         padding: 24px;
+
+    }
+
+
+    /* Buttons */
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        max-width: 300px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+
+    .hero-buttons .button {
+
+        text-align: center;
+
+    }
+
+
+    .contact-buttons {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+
+    .contact-buttons .button {
+
+        width: min(300px, 100%);
+
+        text-align: center;
+
     }
 
 }
-.studyflow-preview {
-    background: linear-gradient(
-        135deg,
-        #F7DDE5,
-        #E4DDF6,
-        #DCEEF7
-    );
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 220px;
-}
 
-.studyflow-preview span {
-    font-family: "Playfair Display", serif;
-    font-size: 2rem;
-    color: #35353D;
+/* =========================================
+   VERY SMALL SCREENS
+   ========================================= */
+
+@media (max-width: 420px) {
+
+
+    .nav-links {
+
+        gap: 11px;
+
+    }
+
+
+    .nav-links a {
+
+        font-size: 0.82rem;
+
+    }
+
+
+    .hero {
+
+        padding-left: 5%;
+
+        padding-right: 5%;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 2.35rem;
+
+    }
+
+
+    .hero h2 {
+
+        font-size: 1.1rem;
+
+    }
+
+
+    .section {
+
+        padding-left: 5%;
+
+        padding-right: 5%;
+
+    }
+
+
+    .section h2 {
+
+        font-size: 2.1rem;
+
+    }
+
 }
