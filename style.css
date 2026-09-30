@@ -1144,3 +1144,22 @@ footer a:hover {
     }
 
 }
+.studyflow-preview {
+    background: linear-gradient(
+        135deg,
+        #F7DDE5,
+        #E4DDF6,
+        #DCEEF7
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+}
+
+.studyflow-preview span {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    color: #35353D;
+}
