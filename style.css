@@ -698,25 +698,27 @@ nav {
 
     max-width: 700px;
 
-    margin: -15px auto 50px;
+    margin: -15px auto 55px;
 
     text-align: center;
 
     color: var(--grey);
 
+    line-height: 1.7;
+
 }
 
 
-/* Project group */
+/* =========================================
+   PROJECT GROUPS
+   ========================================= */
 
 .project-group {
 
-    margin-bottom: 70px;
+    margin-bottom: 75px;
 
 }
 
-
-/* Project group title */
 
 .group-title {
 
@@ -728,14 +730,12 @@ nav {
 
     text-align: center;
 
-    margin-bottom: 25px;
+    margin-bottom: 28px;
 
     position: relative;
 
 }
 
-
-/* Pink line underneath group title */
 
 .group-title::after {
 
@@ -756,27 +756,31 @@ nav {
 }
 
 
-/* Project grid */
+/* =========================================
+   PROJECT GRID
+   ========================================= */
 
 .projects-grid {
 
     display: grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(260px, 1fr));
+        repeat(auto-fit, minmax(280px, 1fr));
 
-    gap: 22px;
+    gap: 24px;
 
 }
 
 
-/* Project card */
+/* =========================================
+   PROJECT CARD
+   ========================================= */
 
 .project-card {
 
     background: rgba(255, 255, 255, 0.78);
 
-    padding: 28px;
+    padding: 30px;
 
     border-radius: 22px;
 
@@ -794,7 +798,7 @@ nav {
 }
 
 
-/* Pink top accent */
+/* Top accent */
 
 .project-card::before {
 
@@ -815,7 +819,7 @@ nav {
 }
 
 
-/* Project hover */
+/* Hover */
 
 .project-card:hover {
 
@@ -829,7 +833,9 @@ nav {
 }
 
 
-/* Project number */
+/* =========================================
+   PROJECT NUMBER
+   ========================================= */
 
 .project-number {
 
@@ -837,14 +843,18 @@ nav {
 
     font-weight: 800;
 
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+
+    letter-spacing: 0.08em;
 
     margin-bottom: 10px;
 
 }
 
 
-/* Project title */
+/* =========================================
+   PROJECT TITLE
+   ========================================= */
 
 .project-card h3 {
 
@@ -852,14 +862,16 @@ nav {
 
     color: var(--purple);
 
-    font-size: 1.35rem;
+    font-size: 1.4rem;
 
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 
 }
 
 
-/* Project description */
+/* =========================================
+   PROJECT DESCRIPTION
+   ========================================= */
 
 .project-card > p:not(.project-number):not(.tech) {
 
@@ -872,7 +884,9 @@ nav {
 }
 
 
-/* Technology badge */
+/* =========================================
+   TECHNOLOGY BADGE
+   ========================================= */
 
 .tech {
 
@@ -880,7 +894,7 @@ nav {
 
     margin-top: 18px;
 
-    padding: 5px 12px;
+    padding: 6px 13px;
 
     border-radius: 20px;
 
@@ -888,7 +902,7 @@ nav {
 
     color: var(--deep-pink);
 
-    font-size: 0.8rem;
+    font-size: 0.78rem;
 
     font-weight: 700;
 
@@ -903,7 +917,7 @@ nav {
 
     margin-top: 20px;
 
-    padding-top: 15px;
+    padding-top: 16px;
 
     border-top: 1px solid rgba(128, 0, 128, 0.12);
 
@@ -938,7 +952,9 @@ nav {
 
     font-size: 0.88rem;
 
-    margin-bottom: 4px;
+    margin-bottom: 5px;
+
+    line-height: 1.5;
 
 }
 
@@ -949,7 +965,7 @@ nav {
 
 .project-links {
 
-    margin-top: 20px;
+    margin-top: 22px;
 
 }
 
@@ -983,8 +999,45 @@ nav {
 
 
 /* =========================================
-   STUDYFLOW FEATURED PROJECT
+   FEATURED PROJECTS
    ========================================= */
+
+/* Aurelia */
+
+.featured-project {
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.95),
+            rgba(255, 228, 225, 0.55)
+        );
+
+    border-color: rgba(255, 20, 147, 0.20);
+
+}
+
+
+.featured-project::before {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--deep-pink),
+            var(--purple)
+        );
+
+}
+
+
+.featured-project:hover {
+
+    border-color: var(--deep-pink);
+
+}
+
+
+/* StudyFlow */
 
 .studyflow-card {
 
@@ -1015,6 +1068,154 @@ nav {
 .studyflow-card:hover {
 
     border-color: var(--deep-pink);
+
+}
+
+
+/* =========================================
+   CODING PRACTICE
+   ========================================= */
+
+.coding-practice-group {
+
+    margin-top: -15px;
+
+}
+
+
+.coding-practice-group .projects-grid {
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+}
+
+
+.coding-practice-group .project-card {
+
+    background: rgba(255, 255, 255, 0.60);
+
+    border-style: dashed;
+
+}
+
+
+.coding-practice-group .project-card::before {
+
+    height: 3px;
+
+    background: var(--purple);
+
+}
+
+
+.coding-practice-group .project-card:hover {
+
+    border-color: var(--purple);
+
+    box-shadow:
+        0 12px 28px rgba(128, 0, 128, 0.10);
+
+}
+
+
+/* =========================================
+   PROJECT SCREENSHOTS
+   ========================================= */
+
+.project-image {
+
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 15px;
+
+    margin-bottom: 24px;
+
+    border: 1px solid rgba(128, 0, 128, 0.10);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+.project-card:hover .project-image {
+
+    transform: scale(1.015);
+
+    box-shadow:
+        0 10px 25px rgba(128, 0, 128, 0.10);
+
+}
+
+
+/* Featured project image */
+
+.featured-project .project-image {
+
+    aspect-ratio: 16 / 9;
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .projects-intro {
+
+        margin-bottom: 40px;
+
+    }
+
+
+    .project-group {
+
+        margin-bottom: 55px;
+
+    }
+
+
+    .group-title {
+
+        font-size: 1.7rem;
+
+    }
+
+
+    .projects-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+    }
+
+
+    .project-card {
+
+        padding: 24px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .project-card h3 {
+
+        font-size: 1.3rem;
+
+    }
 
 }
 
