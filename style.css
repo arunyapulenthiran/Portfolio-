@@ -1070,6 +1070,41 @@ nav {
     border-color: var(--deep-pink);
 
 }
+/* =========================================
+   MATHEMATICS TOOLKIT FEATURED PROJECT
+   ========================================= */
+
+.math-toolkit-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.94),
+            rgba(235, 225, 245, 0.60)
+        );
+
+    border-color: rgba(128, 0, 128, 0.18);
+
+}
+
+
+.math-toolkit-card::before {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--purple),
+            var(--deep-pink)
+        );
+
+}
+
+
+.math-toolkit-card:hover {
+
+    border-color: var(--purple);
+
+}
 
 
 /* =========================================
