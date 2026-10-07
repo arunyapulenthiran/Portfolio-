@@ -1070,42 +1070,6 @@ nav {
     border-color: var(--deep-pink);
 
 }
-/* =========================================
-   MATHEMATICS TOOLKIT FEATURED PROJECT
-   ========================================= */
-
-.math-toolkit-card {
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.94),
-            rgba(235, 225, 245, 0.60)
-        );
-
-    border-color: rgba(128, 0, 128, 0.18);
-
-}
-
-
-.math-toolkit-card::before {
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--purple),
-            var(--deep-pink)
-        );
-
-}
-
-
-.math-toolkit-card:hover {
-
-    border-color: var(--purple);
-
-}
-
 
 /* =========================================
    CODING PRACTICE
@@ -1151,6 +1115,39 @@ nav {
 
     box-shadow:
         0 12px 28px rgba(128, 0, 128, 0.10);
+
+}
+/* =========================================
+   MATHEMATICS TOOLKIT — SAME FEATURED STYLE
+   ========================================= */
+
+.math-toolkit-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.92),
+            rgba(247, 221, 229, 0.55)
+        );
+
+    border-color: rgba(255, 20, 147, 0.20);
+
+}
+
+.math-toolkit-card::before {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--deep-pink),
+            var(--purple)
+        );
+
+}
+
+.math-toolkit-card:hover {
+
+    border-color: var(--deep-pink);
 
 }
 
